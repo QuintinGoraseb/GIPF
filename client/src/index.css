@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    html {
+        @apply scroll-smooth
+    }
+
+    body {
+        background-color: #dbccb3;
+        /*background-color: #C5B7A1;*/
+        overflow-x: hidden; /* Hide horizontal scrollbar */
+        @apply overflow-y-scroll
+    }
+
+    *,
+    *::before,
+    *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    a,
+    img,
+    span,
+    time,
+    input,
+    strong,
+    button,
+    ion-icon {display: block;}
+
+    img {height: auto;}
+
+    ion-icon {pointer-events: none;}
+
+    
+
+    .section {
+        @apply px-12 py-12 xl:py-[60px] xl:px-[80px]
+    }
+
+    /* For WebKit browsers */
+    ::-webkit-scrollbar {
+        height: 8px; /* Adjust the height of the horizontal scrollbar */
+        width: .5px;
+        color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #888; /* Color of the scrollbar thumb */
+        border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555; /* Color when hovering over the scrollbar thumb */
+    }
+}
